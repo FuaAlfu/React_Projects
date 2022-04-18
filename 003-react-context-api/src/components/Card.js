@@ -2,6 +2,7 @@ import React from 'react'
 import {IoShirtOutline} from 'react-icons/io5'
 import {AiFillShopping} from 'react-icons/ai'
 const Card = ({name,price}) => {
+  {/*onClick={() => addItem(name,price)}*/}
     return (
       <div className="card">
          <div className="produc-box">
@@ -15,6 +16,7 @@ const Card = ({name,price}) => {
           {/*End of ..*/}
           <h4>{price}</h4>
       </div>
+      
     );
   }
 

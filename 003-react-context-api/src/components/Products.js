@@ -3,7 +3,6 @@ import Card from './Card';
 import products from '../products';
 
 const Products = () => {
-   
     return (
       <div className="nav">
           {products.map((product) => (
