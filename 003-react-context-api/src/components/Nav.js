@@ -1,7 +1,11 @@
+import { useEffect } from 'react';
 import {Link} from 'react-router-dom';
 import { AiFillShopping } from 'react-icons/ai';
+import CartContext from '../CartContext'
 
 const Nav = () => {
+   const {item} = useEffect(CartContext)
+   console.log(item); //for testing
     return (
       <nav>
          <Link to={"/"}>

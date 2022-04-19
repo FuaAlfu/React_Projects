@@ -1,5 +1,18 @@
 # Getting Started with Create React App
 
+# one
+
+## external pkg
+### craco
+```
+npm i @craco/craco
+```
+### more
+```
+npm i -D craco-alias
+```
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

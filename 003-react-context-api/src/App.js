@@ -3,6 +3,7 @@ import {BrowserRouter, Routes, Route} from "react-router-dom";
 import Nav from './components/Nav';
 import Checkout from 'components/Checkout';
 import Products from './components/Products';
+import {CartProvider} from './CartContext'
 
 function App() {
   const item = 0;
@@ -11,7 +12,9 @@ function App() {
     setItem({name, price});
   };*/}
   return (
+    
     <div className="App">
+    <CartProvider>
         <BrowserRouter>
            <Nav item={item}/>
            <Routes>
@@ -19,6 +22,7 @@ function App() {
                <Route path="/checkout" element={<Checkout/>}/>
            </Routes>
         </BrowserRouter>
+    </CartProvider>
     </div>
   );
 }
