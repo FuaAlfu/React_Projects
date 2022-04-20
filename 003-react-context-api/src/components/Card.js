@@ -1,10 +1,12 @@
-import React from 'react'
-import {IoShirtOutline} from 'react-icons/io5'
-import {AiFillShopping} from 'react-icons/ai'
+import React, {useContext} from 'react';
+import {IoShirtOutline} from 'react-icons/io5';
+import {AiFillShopping} from 'react-icons/ai';
+import CartContext from '../CartContext';
 const Card = ({name,price}) => {
   {/*onClick={() => addItem(name,price)}*/}
+  const {addToCart} = useContext(CartContext);
     return (
-      <div className="card">
+      <div onClick={() => addToCart(name,price)} className="card">
          <div className="produc-box">
              <IoShirtOutline />
          </div>
