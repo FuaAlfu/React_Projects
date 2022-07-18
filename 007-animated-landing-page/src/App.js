@@ -2,6 +2,7 @@ import './App.css';
 // import Test from './components/Test';
 import Header from 'components/Header';
 import TextContainer from './components/TextContainer';
+import BannerContainer from './components/BannerContainer';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Header />
       <main>
          <TextContainer/>
+         <BannerContainer />
       </main>
     </div>
   );
