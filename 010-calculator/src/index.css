@@ -24,6 +24,7 @@ body {
     min-width: 100vh;
     justify-content: center;
     align-items: center;
+    padding: 1rem;
 }
 
 .calc {
@@ -58,4 +59,29 @@ button {
     padding: 16px;
     cursor: pointer;
     transition: 0.4s;
+}
+
+button :hover {
+    opacity: 0.9;
+}
+
+.operators {
+    display: flex;
+}
+
+.operators button {
+    flex: 1 1 0%;
+    background-color: var(--primary-clr);
+    font-weight: 700;
+}
+
+.digits {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.digits button {
+    flex: 1 1 33.333%;
+    max-width: 33.333%;
+    background-color: var(--dark-clr);
 }
