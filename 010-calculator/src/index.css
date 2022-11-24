@@ -1,5 +1,5 @@
 :root {
-    --primary-clr: #d81esb;
+    --primary-clr: ##00dbf5;
     --sub-clr: #8c38ff;
     --dark-clr: #131a26;
     --light-clr: #eee;
@@ -63,6 +63,7 @@ button {
 
 button :hover {
     opacity: 0.9;
+    color: #131a26;
 }
 
 .operators {
