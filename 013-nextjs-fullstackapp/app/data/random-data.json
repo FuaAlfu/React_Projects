@@ -1,0 +1,27 @@
+{
+    "events_categories": [{
+        "id": "Earth",
+        "title": "Events in Earth",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Praesentium mollitia eum vel quos temporibus ex deleniti magni doloremque,
+        ipsum illum fugiat deserunt eaque voluptatem impedit
+        consequatur veniam nam dolore voluptates!",
+        "image": ""
+    }, {
+        "id": "Moon",
+        "title": "Events in Moon",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Praesentium mollitia eum vel quos temporibus ex deleniti magni doloremque,
+        ipsum illum fugiat deserunt eaque voluptatem impedit
+        consequatur veniam nam dolore voluptates!",
+        "image": ""
+    }, {
+        "id": "Mars",
+        "title": "Events in Mars",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Praesentium mollitia eum vel quos temporibus ex deleniti magni doloremque,
+        ipsum illum fugiat deserunt eaque voluptatem impedit
+        consequatur veniam nam dolore voluptates!",
+        "image": ""
+    }]
+}
