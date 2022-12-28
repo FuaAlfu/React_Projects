@@ -5,7 +5,7 @@ import React,{useEffect, useState} from 'react';
 function App() {
   const base = new Airtable({apikey:""}).base('');
   const [goals,setGoals] = useState([]);
-  const [update,setUpdates] = useState([]);
+  const [updates,setUpdates] = useState([]);
 
   useEffect(() => {
     base("goals")
@@ -26,7 +26,14 @@ function App() {
   },[]);
   return (
     <div className="App">
-
+       <h1>My Goal</h1>
+       {goals.map(goal => (
+         <Goal
+         key={goal.id}
+         goal={goal}
+         updates={updates.filter(update => update.fields.goalid[0] === goal.id)}
+         />
+       ))}
     </div>
   );
 }
