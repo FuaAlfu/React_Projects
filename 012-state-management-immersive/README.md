@@ -5,7 +5,7 @@ lang: all
 
 # state management in react
 
-## create app
+## create app with vite using react template
 ```
-yarn vite app-name --template react
+yarn create vite app-name --template react
 ```

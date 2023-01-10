@@ -1,7 +1,48 @@
 import './App.css';
 import {useReducer} from "react";
 
-function App() {
+function UserForm(){
+  const [state,dispatch] = useReducer((state,action) => (
+    {
+      ...state,
+      ...action,
+    }),
+  {
+    first: "",
+    last: "",
+  });
+  return(
+    <div>
+       <input 
+       type="text"
+       value={state.first}
+       onChange={
+           (e) =>
+           dispatch({first: e.target.value})
+          }
+          />
+        {/**/}
+        <input 
+        type="text"
+        value={state.last}
+        onChange={
+          (e) =>
+          dispatch({last: e.target.value})
+         }
+         /> 
+        {/**/}
+        <div>
+           First: {state.first}
+        </div> 
+         {/**/} 
+        <div>
+          Last: {state.last}
+        </div> 
+    </div>
+  )
+}
+
+function NameLess() {
   const [state,dispatch] = useReducer((state,action) => {
     switch(action.type){
       case "SET_NAME":
@@ -22,15 +63,15 @@ function App() {
           <div key={index}>{name}</div>
         )}
     </div>
-       <input 
-       type="text"
-       value={state.name}
-       onChange={
-         (e) =>
-         dispatch({type: "SET_NAME",payload: e.target.value})
-        }
-        />
-        <div>{state.name}</div>
+      {/* <input 
+      //  type="text"
+      //  value={state.name}
+      //  onChange={
+      //    (e) =>
+      //    dispatch({type: "SET_NAME",payload: e.target.value})
+      //   }
+      //   />
+      //   <div>{state.name}</div>**/}
         <button
         onChange={
           (e) =>
@@ -41,6 +82,15 @@ function App() {
         </button>
     </div>
   );
+}
+
+function App(){
+  return(
+    <div>
+      <UserForm />
+      <NameLess />
+    </div>
+  )
 }
 
 export default App;
