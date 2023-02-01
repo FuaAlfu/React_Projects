@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from 'react-router';
 
 const Login = () =>{
-render(){
 return (
 <div id = "webapp">
 
@@ -20,6 +19,5 @@ A custom website for your business that's easy to manage and maintain.
 
 </div>
 );
-}
 }
 export default Login;
