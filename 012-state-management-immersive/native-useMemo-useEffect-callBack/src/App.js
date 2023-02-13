@@ -1,12 +1,12 @@
 import { useState, useMemo } from 'react'
 import './App.css'
 
-function SortedList({list}){
-    const sortedList = useMemo(() =>  [...list].sort(),[list]); 
-    return(
-        <div>
-        </div>
-    )
+function SortedList({list, sortFunc}){
+    console.log("Running sort");
+    const sortedList = useMemo(() => {
+        return [...list].sort(sortFunc);
+    }, [list, sortFunc]); 
+    return <div>{sortedList.join(", ")}</div>
 }
 function App() {
     const [count, setCount] = useState(0)
@@ -22,12 +22,14 @@ function App() {
 
     {/*try: const countTotal = useMemo(() => count1 + count2, [count1, count2]);*/}
     const countTotal = count1 + count2;
+
+    const sortFunc = (a,b) => a.LocaleCompare(b) * -1;
     return (
         <div className = "App" >
            <div>Total: {total}</div>
            --
            <div>Names: {names.join(", ")}</div>
-           <sortedNames list={names}/>
+           <SortedList list={names} sortFunc={sortFunc}/>
            --
            <div>Sorted Names: {sortedNames.join(", ")}</div>
            --
