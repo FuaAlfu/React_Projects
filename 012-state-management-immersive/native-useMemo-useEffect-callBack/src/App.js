@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react'
+import { useState, useMemo, useCallback } from 'react'
 import './App.css'
 
 function SortedList({list, sortFunc}){
@@ -23,7 +23,12 @@ function App() {
     {/*try: const countTotal = useMemo(() => count1 + count2, [count1, count2]);*/}
     const countTotal = count1 + count2;
 
-    const sortFunc = (a,b) => a.LocaleCompare(b) * -1;
+    {/*
+    //using useCallback with nested components such (onClick, onChange..etc)
+    //using useCallback when using custom hook
+    */}
+    const sortFunc = useCallback((a,b) => a.LocaleCompare(b) * -1, []);
+
     return (
         <div className = "App" >
            <div>Total: {total}</div>
