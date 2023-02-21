@@ -7,6 +7,31 @@ react not like render an objects that's why we should use JSON.stringify()
 
 import { useState, useEffect } from "react";
 
+const Stopwatch = () => {
+  const [time, setTime] = useState(0);
+
+//   useEffect(() => {
+//   setInterval(() => {
+//     setTime(time + 1);
+//   }, 1000);
+// },[time]); //add time as dependencies,
+// when time changes we re-run this and get a new value for the time..
+
+//one way is just to give the new value
+useEffect(() => {
+  setInterval(() => {
+    setTime((t) => {
+      console.log(t);
+      return t + 1;
+  });
+  }, 1000);
+},[]);
+
+  return(
+    <div>Time: {time}</div>
+  )
+}
+
 const Testing = () => {
     const [names, setNames] = useState([]);
 
@@ -36,6 +61,7 @@ const Testing = () => {
     render(
         <div>
              <h1>testing</h1>
+             <Stopwatch />
              Names: {names.join(", ")}
              ---
              {/*
