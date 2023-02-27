@@ -19,12 +19,13 @@ const Stopwatch = () => {
 
 //one way is just to give the new value
 useEffect(() => {
-  setInterval(() => {
+ const internal = setInterval(() => {
     setTime((t) => {
       console.log(t);
       return t + 1;
   });
   }, 1000);
+  return () => clearInterval(internal);
 },[]);
 
   return(
