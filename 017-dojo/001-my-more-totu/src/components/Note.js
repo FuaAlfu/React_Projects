@@ -9,4 +9,28 @@ const Note = (props) => {
     )
 }
 
-export default Note;
+const Book = ({title,author}) => {
+    return(
+        <div>
+            <p>{title}</p>
+            <p>{author}</p>    
+        </div>
+    )
+}
+
+const specialBook = {
+    title: "xx:xx",
+    author: "john doe",
+};
+
+const anotherSpecialBook = {
+    title: "xx:xx",
+    author: "boe doe",
+};
+
+module.exports = {
+    specialBook: specialBook,
+    anotherSpecialBook: anotherSpecialBook,
+}
+
+export { Note, Book};
